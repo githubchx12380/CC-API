@@ -8,7 +8,7 @@ const app = express()
 app.use(require('cors')())  //跨域
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))  //body-parser
-app.use('/',express.static('./web'))
+app.use('/',express.static('./web/.nuxt'))
 app.use('/admin',express.static('./admin')) 
 app.use('/upload',express.static('./upload'))  //发放图片
 
