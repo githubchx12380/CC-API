@@ -31,7 +31,7 @@ export default {
     '@assets/theme.css',
   ],
   server: {
-    port: 3000, // default: 3000
+    port: 8080, // default: 3000
   },
   /*
   ** Plugins to load before mounting the App
