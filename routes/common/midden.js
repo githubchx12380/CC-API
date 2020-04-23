@@ -1,8 +1,10 @@
 const multer = require('multer')
+const path = require('path')
 module.exports = app => {
     var storage = multer.diskStorage({
         destination: function (req, file, cb) {
-            cb(null,__dirname + '/../../upload');
+           
+            cb(null,path.join(__dirname,'/../../upload'));
         },
         filename: function (req, file, cb) {
             let houz = file.originalname.split('.').pop()
@@ -15,7 +17,7 @@ module.exports = app => {
     // const upload = multer({ dest: __dirname + '/../../upload' })
     app.post('/admin/api/upload', uploadfiles.single('file'), (req, res) => {
         const file = req.file
-        file.url = `http://localhost:3000/upload/${file.filename}`
+        file.url = `http://localhost:3001/upload/${file.filename}`
         res.send(file)
     })
     

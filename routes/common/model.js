@@ -7,7 +7,7 @@ const jwt = require('jsonwebtoken')
 const connetion = mysql.createConnection({
     host:"127.0.0.1",
     user:'root',
-    password:'Fengyating520',
+    password:'root',
     database:'myblog'
 })
 exports.selectTable = (table,id,callback) => {
