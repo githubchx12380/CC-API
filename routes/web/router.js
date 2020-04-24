@@ -12,5 +12,5 @@ module.exports = app => {
           .post('/inputLike',handle.inputLike)  //input搜索
           .get('/detail/:id',handle.detailData)
           .get('/newindex',handle.newindex) //最新收录
-           
+         
 }

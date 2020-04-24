@@ -54,5 +54,15 @@ exports.detailData = (req,res) => {
 exports.newindex = async (req,res) => {
     const news = await  model.newindexs()
     const hot = await model.hotData()
-    res.send({news,hot})
+    const swiper = {
+        url1:'https://node.12380ch.com/upload/swiper/maxresdefault.jpg',
+        url2:'https://node.12380ch.com/upload/swiper/chrome_jc.jpg'
+    }
+    res.send({news,hot,swiper})
+}
+
+exports.selectLogo = (req,res) => {
+    let obj = {
+        url:'https://node.12380ch.com/upload/swiper/logo.jpg'
+    }
 }
